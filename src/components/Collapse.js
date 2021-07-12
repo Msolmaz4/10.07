@@ -16,7 +16,8 @@ class Collapse extends React.Component {
         return (
             <div>
                 <button className="btn btn-primary w-100" onClick ={this.showMore}>
-                    {this.props.children.props.cardTitle}
+              
+                   {React.Children.map(this.props.children,children => children.props.cardTitle)}
                 </button>
                 {
                     this.state.showContent ?(
