@@ -3,12 +3,8 @@ import React from 'react';
 
 class Collapse extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-            showContent: false
-        }
-    }
+    
+    state = { showContent:false}
     
      showMore = () => {
          this.setState({showContent:!this.state.showContent})
@@ -20,7 +16,7 @@ class Collapse extends React.Component {
         return (
             <div>
                 <button className="btn btn-primary w-100" onClick ={this.showMore}>
-                    Link with href
+                    {this.props.children.props.cardTitle}
                 </button>
                 {
                     this.state.showContent ?(
